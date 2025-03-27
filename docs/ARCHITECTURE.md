@@ -6,7 +6,7 @@
 - [ ] Platform Connectors
   - [x] Facebook Ads Integration
   - [x] Google Ads Integration
-  - [ ] TikTok Ads Integration
+  - [x] TikTok Ads Integration
   - [ ] LinkedIn Ads Integration
 - [ ] Data Pipeline
   - [ ] ETL Processes
