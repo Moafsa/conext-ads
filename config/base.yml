@@ -1,0 +1,37 @@
+---
+# Base configuration for data pipeline
+database:
+  host: localhost
+  port: 5432
+  database: conext_ads
+  schema: public
+  username: postgres
+  password: ${PIPELINE_DB_PASSWORD}
+
+kafka:
+  bootstrap_servers: localhost:9092
+  schema_registry_url: http://localhost:8081
+  consumer_group: conext-ads-pipeline
+  topics:
+    - ad_events
+    - campaign_updates
+    - performance_metrics
+  security_protocol: PLAINTEXT
+
+webhook:
+  webhook_url: http://localhost:8000/webhook
+  auth_token: ${PIPELINE_WEBHOOK_TOKEN}
+  retry_attempts: 3
+  retry_delay: 5
+
+logging:
+  level: INFO
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  handlers:
+    file:
+      class: logging.FileHandler
+      filename: logs/pipeline.log
+      formatter: default
+    console:
+      class: logging.StreamHandler
+      formatter: default
