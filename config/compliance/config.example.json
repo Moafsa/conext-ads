@@ -1,0 +1,50 @@
+{
+    "policy_checker": {
+        "rules_file": "config/compliance/rules.json",
+        "cache_enabled": true,
+        "cache_ttl": 3600,
+        "baseline_volume": 1000
+    },
+    "content_moderator": {
+        "models": {
+            "toxicity": "models/toxicity.pkl",
+            "sentiment": "models/sentiment.pkl",
+            "nsfw": "models/nsfw.pkl",
+            "object_detection": "models/object.pkl"
+        },
+        "cache_enabled": true,
+        "cache_ttl": 3600,
+        "confidence_threshold": 0.8,
+        "batch_size": 10
+    },
+    "regulatory_monitor": {
+        "regulations_file": "config/compliance/regulations.json",
+        "cache_enabled": true,
+        "cache_ttl": 3600,
+        "update_interval": 86400,
+        "api_url": "https://api.regulations.example.com",
+        "api_key": "YOUR_API_KEY"
+    },
+    "compliance_reporter": {
+        "templates_path": "templates/compliance",
+        "smtp_config": {
+            "host": "smtp.example.com",
+            "port": 465,
+            "username": "reporter@example.com",
+            "password": "YOUR_PASSWORD",
+            "sender": "compliance@example.com"
+        },
+        "alert_thresholds": {
+            "high": 0.8,
+            "medium": 0.5
+        },
+        "report_schedule": {
+            "daily": "00:00",
+            "weekly": "MON 00:00"
+        },
+        "alert_recipients": [
+            "admin@example.com"
+        ],
+        "baseline_volume": 1000
+    }
+}
