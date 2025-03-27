@@ -1,0 +1,20 @@
+# Test dependencies
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-asyncio==0.21.1
+pytest-mock==3.12.0
+pytest-env==1.1.1
+pytest-xdist==3.3.1
+pytest-timeout==2.2.0
+pytest-randomly==3.15.0
+pytest-sugar==0.9.7
+coverage==7.3.2
+black==23.11.0
+isort==5.12.0
+flake8==6.1.0
+mypy==1.7.1
+bandit==1.7.5
+safety==2.3.5
+freezegun==1.2.2
+responses==0.24.1
+faker==20.1.0
