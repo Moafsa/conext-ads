@@ -1,0 +1,33 @@
+---
+# Test environment configuration
+database:
+  host: localhost
+  port: 5432
+  database: conext_ads_test
+  schema: public
+  username: test_user
+  password: test_password
+
+kafka:
+  bootstrap_servers: localhost:9092
+  schema_registry_url: http://localhost:8081
+  consumer_group: conext-ads-pipeline-test
+  topics:
+    - test_ad_events
+    - test_campaign_updates
+    - test_performance_metrics
+
+webhook:
+  webhook_url: http://localhost:8000/test/webhook
+  auth_token: test_token
+  retry_attempts: 2
+  retry_delay: 2
+
+logging:
+  level: DEBUG
+  handlers:
+    file:
+      level: INFO
+      filename: logs/pipeline-test.log
+    console:
+      level: DEBUG
