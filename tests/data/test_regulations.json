@@ -1,0 +1,46 @@
+{
+    "regulations": [
+        {
+            "id": "reg1",
+            "name": "GDPR",
+            "description": "General Data Protection Regulation",
+            "region": "EU",
+            "industry": "all",
+            "requirements": {
+                "data_collection": ["consent", "purpose"],
+                "data_storage": ["encryption", "retention"],
+                "user_rights": ["access", "deletion"]
+            },
+            "effective_date": "2018-05-25T00:00:00Z",
+            "last_updated": "2023-01-01T00:00:00Z"
+        },
+        {
+            "id": "reg2",
+            "name": "CCPA",
+            "description": "California Consumer Privacy Act",
+            "region": "US-CA",
+            "industry": "all",
+            "requirements": {
+                "data_collection": ["notice", "opt_out"],
+                "data_sale": ["disclosure", "opt_out"],
+                "user_rights": ["access", "deletion", "portability"]
+            },
+            "effective_date": "2020-01-01T00:00:00Z",
+            "last_updated": "2023-01-01T00:00:00Z"
+        },
+        {
+            "id": "reg3",
+            "name": "LGPD",
+            "description": "Lei Geral de Proteção de Dados",
+            "region": "BR",
+            "industry": "all",
+            "requirements": {
+                "data_collection": ["consent", "purpose", "minimization"],
+                "data_storage": ["security", "retention"],
+                "user_rights": ["access", "correction", "deletion", "portability"]
+            },
+            "effective_date": "2020-09-18T00:00:00Z",
+            "last_updated": "2023-01-01T00:00:00Z"
+        }
+    ]
+}
