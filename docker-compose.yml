@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/app
+      - test-data:/app/tests/data
+      - models:/app/models
+    environment:
+      - ENVIRONMENT=test
+      - PYTHONPATH=/app
+    command: >
+      bash -c "
+        # Wait for any dependencies if needed
+        # Run tests
+        pytest tests/ -v --cov=src
+        # Run demo
+        python tests/demo.py
+      "
+
+  redis:
+    image: redis:6-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+volumes:
+  test-data:
+  models:
+  redis-data:
