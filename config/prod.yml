@@ -1,0 +1,32 @@
+---
+# Production environment configuration
+database:
+  host: ${PIPELINE_DB_HOST}
+  port: ${PIPELINE_DB_PORT}
+  database: conext_ads_prod
+  schema: public
+  username: ${PIPELINE_DB_USER}
+  password: ${PIPELINE_DB_PASSWORD}
+
+kafka:
+  bootstrap_servers: ${PIPELINE_KAFKA_SERVERS}
+  schema_registry_url: ${PIPELINE_SCHEMA_REGISTRY}
+  consumer_group: conext-ads-pipeline-prod
+  security_protocol: SASL_SSL
+  sasl_mechanism: PLAIN
+  sasl_username: ${PIPELINE_KAFKA_USER}
+  sasl_password: ${PIPELINE_KAFKA_PASSWORD}
+
+webhook:
+  webhook_url: ${PIPELINE_WEBHOOK_URL}
+  auth_token: ${PIPELINE_WEBHOOK_TOKEN}
+  retry_attempts: 5
+  retry_delay: 10
+
+logging:
+  level: WARNING
+  handlers:
+    file:
+      level: INFO
+    console:
+      level: WARNING
