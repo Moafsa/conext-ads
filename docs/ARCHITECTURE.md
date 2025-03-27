@@ -5,7 +5,7 @@
 ### 5. Technical Integrations Module
 - [ ] Platform Connectors
   - [x] Facebook Ads Integration
-  - [ ] Google Ads Integration
+  - [x] Google Ads Integration
   - [ ] TikTok Ads Integration
   - [ ] LinkedIn Ads Integration
 - [ ] Data Pipeline
