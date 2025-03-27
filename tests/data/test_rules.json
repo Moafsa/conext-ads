@@ -1,0 +1,34 @@
+{
+    "rules": [
+        {
+            "id": "rule1",
+            "name": "No profanity",
+            "description": "Checks for prohibited words",
+            "prohibited_words": ["bad_word1", "bad_word2"],
+            "regex_patterns": ["\\bbad\\s*word\\b"],
+            "required_elements": ["disclaimer"],
+            "min_length": 10,
+            "max_length": 1000,
+            "platform": "all"
+        },
+        {
+            "id": "rule2",
+            "name": "Image requirements",
+            "description": "Checks image specifications",
+            "min_width": 400,
+            "min_height": 400,
+            "max_size_kb": 500,
+            "allowed_formats": ["jpg", "png"],
+            "platform": "facebook"
+        },
+        {
+            "id": "rule3",
+            "name": "Campaign budget",
+            "description": "Checks campaign budget limits",
+            "min_budget": 100,
+            "max_budget": 10000,
+            "currency": "USD",
+            "platform": "all"
+        }
+    ]
+}
