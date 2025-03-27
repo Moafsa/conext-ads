@@ -1,0 +1,26 @@
+---
+# Development environment configuration
+database:
+  host: localhost
+  port: 5432
+  database: conext_ads_dev
+  schema: public
+  username: dev_user
+  password: dev_password
+
+kafka:
+  bootstrap_servers: localhost:9092
+  schema_registry_url: http://localhost:8081
+  consumer_group: conext-ads-pipeline-dev
+
+webhook:
+  webhook_url: http://localhost:8000/webhook
+  auth_token: dev_token
+  retry_attempts: 1
+  retry_delay: 1
+
+logging:
+  level: DEBUG
+  handlers:
+    console:
+      level: DEBUG
